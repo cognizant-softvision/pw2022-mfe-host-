@@ -1,0 +1,101 @@
+.home {
+    overflow: hidden;
+}
+
+.homeNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 62px;
+    gap: 24px;
+}
+.homeNav li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.homeNav li+li {
+     margin-left: 27px;
+}
+
+.homeNavLink {
+    text-decoration: none;
+    background: #eef1f4;
+    color: #667080;
+    padding: 13px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    width: auto;
+    height: 48px;
+    border-radius: 6px;
+}
+.homePromptTitle {
+    margin-top: 53px;
+    font-size: 18px;
+    text-align: center;
+}
+.homePromptSubtitle {
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.heroBanner {
+    background: var(--midnight-blue);
+    background-image: url("/public/img/star-background.png");
+    /* background-size: cover; */
+    width: 100%;
+    height: 224px;
+    overflow: hidden;
+}
+.heroContent {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 5vw;
+}
+.heroTitle {
+    margin-top: 40px;
+    text-align: start;
+    white-space: break-spaces;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    display: flex;
+    letter-spacing: -0.02em;
+    color: #EAFD76;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.callToActionBtn {
+    width: 156px;
+    height: 48px;
+    border-radius: 6px;
+    background: var(--white);
+    color: #142C3D; /* NOT IN COLOR VARS */
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+.readMore {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    margin-bottom: 19px;
+}
