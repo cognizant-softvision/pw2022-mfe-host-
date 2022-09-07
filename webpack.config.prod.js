@@ -77,6 +77,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       // filename: "[name].css",
       filename: "[name].[contenthash].css",
+      chunkFilename: 'chunk-[id].css',
     }),
     new ModuleFederationPlugin({
       // name of remote, beware name collisions
