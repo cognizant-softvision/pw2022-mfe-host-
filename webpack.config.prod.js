@@ -46,12 +46,13 @@ module.exports = {
         test: /\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: {
-              // url: false
-            },
-          },
+          'css-loader'
+          // {
+          //   loader: "css-loader",
+          //   options: {
+          //     // url: false
+          //   },
+          // },
         ],
       },
       {
@@ -74,7 +75,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      // filename: "[name].css",
+      filename: "[name].[contenthash].css",
     }),
     new ModuleFederationPlugin({
       // name of remote, beware name collisions
@@ -108,7 +110,7 @@ module.exports = {
     }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
-      chunks: ["host"],
+      // chunks: ["host"],
       templateParameters: {
         assetsUrl: `${REMOTE_WEB_COMPONENTS}`
       },
