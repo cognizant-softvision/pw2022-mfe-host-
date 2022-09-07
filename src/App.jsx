@@ -12,6 +12,8 @@ import ErrorBoundary from "components/ErrorBoundary";
 import ErrorComponent from "components/errorComponent/ErrorComponent";
 import PublicLayout from "components/public-layout/PublicLayout";
 
+import './global.css';
+
 
 function Entry() {
   const [user, dispatch] = useContext(UserContext);

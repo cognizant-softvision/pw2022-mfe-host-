@@ -41,10 +41,6 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, "./dist"),
     },
-    // publicPath: '/',
-    // historyApiFallback: {
-    //   index: 'index.html'
-    // },
     historyApiFallback: true,
     devMiddleware: {
       index: "index.html",
@@ -103,27 +99,29 @@ module.exports = {
       },
       //  exposed "remotes" for other apps to see, they will be imported under "remotes" with this format: name@location
       exposes: {},
-      shared: {
+      shared: 
+      // {...deps}
+      {
         react: {
           singleton: true,
-          eager: true,
+          // eager: true,
           requiredVersion: deps["react"],
         },
         "react-dom": {
           singleton: true,
-          eager: true,
+          // eager: true,
           requiredVersion: deps["react-dom"],
         },
         "react-router-dom": {
           singleton: true,
-          eager: true,
+          // eager: true,
           requiredVersion: deps["react-router-dom"],
         },
       },
     }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
-      chunks: ["host"],
+      // chunks: ["host"],
       templateParameters: {
         assetsUrl: `${LOCAL_WEB_COMPONENTS || REMOTE_WEB_COMPONENTS}`,
       },

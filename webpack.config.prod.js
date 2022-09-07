@@ -15,7 +15,6 @@ module.exports = {
   mode: "production",
   entry: {
     host: path.resolve(__dirname, "./src/index.js"),
-    styles: [path.resolve(__dirname, "./styles/css/styles.js")],
   },
   output: {
     filename: "[name].[hash].bundle.js",
