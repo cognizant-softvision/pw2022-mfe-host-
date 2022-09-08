@@ -104,17 +104,17 @@ module.exports = {
       {
         react: {
           singleton: true,
-          // eager: true,
+          eager: true,
           requiredVersion: deps["react"],
         },
         "react-dom": {
           singleton: true,
-          // eager: true,
+          eager: true,
           requiredVersion: deps["react-dom"],
         },
         "react-router-dom": {
           singleton: true,
-          // eager: true,
+          eager: true,
           requiredVersion: deps["react-router-dom"],
         },
       },
