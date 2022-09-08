@@ -42,7 +42,7 @@ function Entry() {
     isLoginDefined ? (
       <cwc-login
         ref={ceRef}
-        prompt="Sign in with your account"
+        prompt="Sign in with your name"
         description="Welcome to Programmer's Week"
       >
         <img style={{ marginTop: "196px"}} slot="titleLogo" src="assets/logo.png" alt="Cognizant Softvision" />
