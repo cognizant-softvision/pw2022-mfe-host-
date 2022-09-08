@@ -17,7 +17,7 @@ module.exports = {
     host: path.resolve(__dirname, "./src/index.js"),
   },
   output: {
-    filename: "[name].[hash].bundle.js",
+    filename: "[name].bundle.[hash].js",
     path: path.resolve(__dirname, "./dist"),
     publicPath: REMOTE,
   },
@@ -32,6 +32,9 @@ module.exports = {
   optimization: {
     minimizer: [new CssMinimizerPlugin()],
     minimize: true,
+    // splitChunks: true,
+    chunkIds: 'named',
+    //splitChunks: false
   },
   module: {
     rules: [
@@ -87,7 +90,7 @@ module.exports = {
       remotes: {
         ReactComponents: `topbar_remote@${REMOTE_TOPBAR}/remoteEntry.js`,
         WebComponents: `wc_system@${REMOTE_WEB_COMPONENTS}/remoteEntry.js`,
-        StandaloneMFE: `wc_demo@${REMOTE_STANDALONE_MFE}/remoteEntry.js`,
+        StandaloneMFE: `WCDemo@${REMOTE_STANDALONE_MFE}/remoteEntry.js`,
       },
       //  exposed "remotes" for other apps to see, they will be imported under "remotes" with this format: name@location
       exposes: {},
